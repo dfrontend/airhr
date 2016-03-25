@@ -4676,10 +4676,12 @@ header {
   border-radius: 0.75rem; }
   .search-module form {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    /*for mobile and tablet portrait*/ }
     @media (min-width: 62em) {
       .search-module form {
-        flex-direction: row; } }
+        flex-direction: row;
+        /*for desktops*/ } }
     .search-module form .form-group {
       margin: 0;
       flex-grow: 1;
