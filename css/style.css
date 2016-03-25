@@ -4676,20 +4676,31 @@ header {
   border-radius: 0.75rem; }
   .search-module form {
     display: flex;
-    flex-direction: row; }
+    flex-direction: column; }
+    @media (min-width: 34em) {
+      .search-module form {
+        flex-direction: row; } }
     .search-module form .form-group {
       margin: 0;
       flex-grow: 1;
-      margin-left: 5px; }
-    .search-module form .btn {
+      margin-bottom: 5px; }
+      @media (min-width: 34em) {
+        .search-module form .form-group {
+          margin-right: 5px; } }
+      .search-module form .form-group .btn {
+        background-color: #fff; }
+    .search-module form input, .search-module form .btn {
+      height: 50px;
+      line-height: 50px;
+      padding: 10px;
       border-radius: 0.75rem; }
-    .search-module form input {
+    .search-module form input, .search-module form .dropdown-toggle {
       border: 0;
       box-shadow: none;
       border-radius: 0.75rem;
-      width: 100%;
-      height: 52px;
-      line-height: 52px; }
+      width: 100%; }
+    .search-module form .dropdown-toggle, .search-module form .btn {
+      line-height: initial; }
 
 footer {
   flex-grow: 1;
