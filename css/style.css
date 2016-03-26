@@ -4661,8 +4661,12 @@ a.bg-danger:focus, a.bg-danger:hover {
   height: 100vh; }
 
 header {
+  display: flex;
   flex-grow: 1;
   text-align: center; }
+  header .container {
+    display: flex;
+    align-items: flex-end; }
   header .brand {
     font-size: 5rem; }
 
@@ -4683,27 +4687,40 @@ header {
         flex-direction: row;
         /*for desktops*/ } }
     .search-module form .form-group {
-      margin: 0;
-      flex-grow: 1;
-      margin-bottom: 5px;
-      margin-right: 0; }
+      margin: 0 0 5px 0;
+      flex-grow: 1; }
       @media (min-width: 62em) {
         .search-module form .form-group {
           margin-right: 5px;
           margin-bottom: 0; } }
       .search-module form .form-group .btn {
         background-color: #fff;
-        border-radius: 0.75rem; }
-    .search-module form input, .search-module form .btn {
+        border-radius: 0.75rem;
+        text-align: center; }
+        @media (min-width: 62em) {
+          .search-module form .form-group .btn {
+            text-align: left; } }
+    .search-module form input, .search-module form .btn, .search-module form input:focus, .search-module form .btn:focus {
       height: 50px;
-      line-height: 50px;
+      /*line-height: 50px;*/
       padding: 10px;
-      border-radius: 0.75rem; }
+      border-radius: 0.75rem;
+      font-size: 20px;
+      outline: none; }
     .search-module form input, .search-module form .dropdown-toggle {
       border: 0;
       box-shadow: none;
       border-radius: 0.75rem;
       width: 100%; }
+    .search-module form input[placeholder] {
+      color: #000; }
+    .search-module form .btn-group {
+      width: auto; }
+      .search-module form .btn-group .dropdown-toggle::after {
+        content: none; }
+      @media (min-width: 72em) {
+        .search-module form .btn-group {
+          width: 40px; } }
     .search-module form .dropdown-toggle, .search-module form .btn {
       line-height: initial; }
     .search-module form .btn-go {
