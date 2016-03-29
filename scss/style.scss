@@ -1,0 +1,154 @@
+//bootstrap scss
+@import "../bower_components/bootstrap/scss/bootstrap.scss";
+
+//custom variables
+$airhr-blue:  #308DB7;
+
+
+//styles
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+
+  .container {
+    display: flex;
+    align-items: flex-end;
+
+  }
+
+  .brand {
+    font-size: 3rem;
+
+    // Large devices (desktops, 62em and up)
+    @media (min-width: 62em) {
+      font-size: 5rem;
+
+    }
+
+  }
+
+}
+
+.main-content {
+  flex-grow: 1;
+
+  .search-module {
+    background-color: $airhr-blue;
+    padding:10px;
+  }
+}
+
+.search-module {
+  border-radius: $border-radius * 3;
+
+  form {
+    display: flex;
+    flex-direction:column; /*for mobile and tablet portrait*/
+
+    // Large devices (desktops, 62em and up)
+    @media (min-width: 62em) {
+      flex-direction: row; /*for desktops*/
+
+    }
+
+    .form-group {
+      margin:0 0 5px 0;
+      flex-grow: 1;
+
+      // Large devices (desktops, 62em and up)
+      @media (min-width: 62em) {
+        margin-right: 5px;
+        margin-bottom: 0;
+
+      }
+
+      .btn {
+        background-color: $component-active-color;
+        border-radius: $border-radius * 3;
+        text-align: center;
+        // Large devices (desktops, 62em and up)
+        @media (min-width: 62em) {
+          text-align: left;
+
+        }
+      }
+
+    }
+
+    input, .btn, input:focus, .btn:focus {
+      height: 50px;
+      /*line-height: 50px;*/
+      padding:10px;
+      border-radius: $border-radius * 3;
+      font-size: 20px;
+      outline:none;
+    }
+
+    input, .dropdown-toggle {
+      border:0;
+      box-shadow: none;
+      border-radius: $border-radius * 3;
+      width: 100%;
+
+    }
+    
+    input[placeholder]{
+      color: #000;
+    }
+
+    .btn-group {
+      width:auto;
+
+      .dropdown-toggle::after {
+        content: none;
+      }
+
+      // Large devices (desktops, 62em and up)
+      @media (min-width: 72em) {
+        width: 40px;
+
+      }
+
+    }
+
+    .dropdown-toggle, .btn {
+      line-height: initial;
+    }
+    
+    .btn-go {
+      padding: 0 30px !important;
+      line-height: 50px;
+    }
+
+  }
+
+
+}
+
+
+.header-inside {
+  background-color: $airhr-blue;
+}
+
+
+
+
+
+
+footer {
+  flex-grow:1;
+  text-align: center;
+  
+  .resume-count {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $airhr-blue;
+  }
+}

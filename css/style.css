@@ -4668,7 +4668,10 @@ header {
     display: flex;
     align-items: flex-end; }
   header .brand {
-    font-size: 5rem; }
+    font-size: 3rem; }
+    @media (min-width: 62em) {
+      header .brand {
+        font-size: 5rem; } }
 
 .main-content {
   flex-grow: 1; }
@@ -4724,7 +4727,11 @@ header {
     .search-module form .dropdown-toggle, .search-module form .btn {
       line-height: initial; }
     .search-module form .btn-go {
-      padding: 0 30px !important; }
+      padding: 0 30px !important;
+      line-height: 50px; }
+
+.header-inside {
+  background-color: #308DB7; }
 
 footer {
   flex-grow: 1;
