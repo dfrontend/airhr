@@ -4668,7 +4668,9 @@ header {
     display: flex;
     align-items: flex-end; }
   header .brand {
-    font-size: 3rem; }
+    font-size: 3rem;
+    line-height: 100%;
+    margin-bottom: 20px; }
     @media (min-width: 62em) {
       header .brand {
         font-size: 5rem; } }
@@ -4732,6 +4734,13 @@ header {
 
 .header-inside {
   background-color: #308DB7; }
+  .header-inside header, .header-inside .container {
+    display: block; }
+  .header-inside header .brand {
+    margin: 0;
+    font-size: 3rem;
+    color: #fff;
+    line-height: 100%; }
 
 footer {
   flex-grow: 1;
