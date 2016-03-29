@@ -3,7 +3,8 @@
 
 //custom variables
 $airhr-blue:  #308DB7;
-
+$airhr-lt-blue: #C4DCE6;
+$color-white: #fff;
 
 //styles
 .page-wrapper {
@@ -20,17 +21,16 @@ header {
   .container {
     display: flex;
     align-items: flex-end;
-
   }
 
   .brand {
     font-size: 3rem;
     line-height: 100%;
     margin-bottom: 20px;
+
     // Large devices (desktops, 62em and up)
     @media (min-width: 62em) {
       font-size: 5rem;
-
     }
 
   }
@@ -39,124 +39,158 @@ header {
 
 .main-content {
   flex-grow: 1;
-
-  .search-module {
-    background-color: $airhr-blue;
-    padding:10px;
-  }
 }
 
 .search-module {
   border-radius: $border-radius * 3;
+  background-color: $airhr-blue;
+  padding:10px;
+}
 
-  form {
-    display: flex;
-    flex-direction:column; /*for mobile and tablet portrait*/
+form {
+  display: flex;
+  flex-direction:column; /*for mobile and tablet portrait*/
+
+  // Large devices (desktops, 62em and up)
+  @media (min-width: 62em) {
+    flex-direction: row; /*for desktops*/
+
+  }
+
+  .form-group {
+    margin:0 0 5px 0;
+    flex-grow: 1;
 
     // Large devices (desktops, 62em and up)
     @media (min-width: 62em) {
-      flex-direction: row; /*for desktops*/
-
+      margin-right: 5px;
+      margin-bottom: 0;
     }
 
-    .form-group {
-      margin:0 0 5px 0;
-      flex-grow: 1;
+  }
+
+  input, .btn, input:focus, .btn:focus {
+    height: 50px;
+    /*line-height: 50px;*/
+    padding:10px;
+    border-radius: $border-radius * 3;
+    font-size: 20px;
+    outline:none;
+  }
+
+  input, .dropdown-toggle {
+    border:0;
+    box-shadow: none;
+    border-radius: $border-radius * 3;
+    width: 100%;
+
+  }
+
+  input[placeholder]{
+    color: #000;
+  }
+
+  .btn-group {
+    width:auto;
+
+    .dropdown-toggle::after {
+      content: none;
+    }
+
+    // Large devices (desktops, 62em and up)
+    @media (min-width: 72em) {
+      width: 40px;
+
+    }
+    .btn {
+      background-color: $color-white;
+      border-radius: $border-radius * 3;
+      text-align: center;
 
       // Large devices (desktops, 62em and up)
       @media (min-width: 62em) {
-        margin-right: 5px;
-        margin-bottom: 0;
+        text-align: left;
 
       }
-
-      .btn {
-        background-color: $component-active-color;
-        border-radius: $border-radius * 3;
-        text-align: center;
-        // Large devices (desktops, 62em and up)
-        @media (min-width: 62em) {
-          text-align: left;
-
-        }
-      }
-
-    }
-
-    input, .btn, input:focus, .btn:focus {
-      height: 50px;
-      /*line-height: 50px;*/
-      padding:10px;
-      border-radius: $border-radius * 3;
-      font-size: 20px;
-      outline:none;
-    }
-
-    input, .dropdown-toggle {
-      border:0;
-      box-shadow: none;
-      border-radius: $border-radius * 3;
-      width: 100%;
-
-    }
-    
-    input[placeholder]{
-      color: #000;
-    }
-
-    .btn-group {
-      width:auto;
-
-      .dropdown-toggle::after {
-        content: none;
-      }
-
-      // Large devices (desktops, 62em and up)
-      @media (min-width: 72em) {
-        width: 40px;
-
-      }
-
-    }
-
-    .dropdown-toggle, .btn {
-      line-height: initial;
-    }
-    
-    .btn-go {
-      padding: 0 30px !important;
-      line-height: 50px;
     }
 
   }
 
+  .dropdown-toggle, .btn {
+    line-height: initial;
+  }
+
+  .btn-go {
+    padding: 0 30px !important;
+    line-height: 50px;
+  }
 
 }
 
-
+/*header inside*/
 .header-inside {
   background-color: $airhr-blue;
-  
+  border-bottom: 5px solid $color-white;
+
+  .user-login {
+    margin-top: 17px;
+    a {
+      color: $color-white;
+    }
+  }
+
   header,.container {
     display: block;
-
   }
-  
+
   header {
+
     .brand {
       margin: 0;
-      font-size: 3rem;
-      color: #fff;
+      font-size: 2.5rem;
+      font-weight:700;
+      padding:10px 0;
+      text-align: left;
+      color: $color-white;
       line-height:100%;
     }
   }
+  
+  .search-module {
+    background-color: $airhr-lt-blue;
+    padding: 5px;
+    margin-top: 5px;
+
+    input, .btn, input:focus, .btn:focus {
+      height: 40px;
+      line-height: 100%;
+      padding:10px;
+      border-radius: $border-radius * 2;
+      font-size: 15px;
+      outline:none;
+    }
+
+    .btn-go, .btn-go:focus {
+      line-height:40px;
+    }
+  }
+}
+
+.inside-content {
+  background-color: $gray-lighter;
+  @include border-radius(10px);
+  .search-filters {
+    background-color: $airhr-blue;
+    @include border-radius(15px);
+    padding:10px;
+    color: $color-white;
+  }
 }
 
 
 
 
-
-
+/*footer*/
 footer {
   flex-grow:1;
   text-align: center;

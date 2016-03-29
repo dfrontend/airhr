@@ -4677,71 +4677,103 @@ header {
 
 .main-content {
   flex-grow: 1; }
-  .main-content .search-module {
-    background-color: #308DB7;
-    padding: 10px; }
 
 .search-module {
-  border-radius: 0.75rem; }
-  .search-module form {
-    display: flex;
-    flex-direction: column;
-    /*for mobile and tablet portrait*/ }
-    @media (min-width: 62em) {
-      .search-module form {
-        flex-direction: row;
-        /*for desktops*/ } }
-    .search-module form .form-group {
-      margin: 0 0 5px 0;
-      flex-grow: 1; }
-      @media (min-width: 62em) {
-        .search-module form .form-group {
-          margin-right: 5px;
-          margin-bottom: 0; } }
-      .search-module form .form-group .btn {
-        background-color: #fff;
-        border-radius: 0.75rem;
-        text-align: center; }
-        @media (min-width: 62em) {
-          .search-module form .form-group .btn {
-            text-align: left; } }
-    .search-module form input, .search-module form .btn, .search-module form input:focus, .search-module form .btn:focus {
-      height: 50px;
-      /*line-height: 50px;*/
-      padding: 10px;
-      border-radius: 0.75rem;
-      font-size: 20px;
-      outline: none; }
-    .search-module form input, .search-module form .dropdown-toggle {
-      border: 0;
-      box-shadow: none;
-      border-radius: 0.75rem;
-      width: 100%; }
-    .search-module form input[placeholder] {
-      color: #000; }
-    .search-module form .btn-group {
-      width: auto; }
-      .search-module form .btn-group .dropdown-toggle::after {
-        content: none; }
-      @media (min-width: 72em) {
-        .search-module form .btn-group {
-          width: 40px; } }
-    .search-module form .dropdown-toggle, .search-module form .btn {
-      line-height: initial; }
-    .search-module form .btn-go {
-      padding: 0 30px !important;
-      line-height: 50px; }
+  border-radius: 0.75rem;
+  background-color: #308DB7;
+  padding: 10px; }
 
+form {
+  display: flex;
+  flex-direction: column;
+  /*for mobile and tablet portrait*/ }
+  @media (min-width: 62em) {
+    form {
+      flex-direction: row;
+      /*for desktops*/ } }
+  form .form-group {
+    margin: 0 0 5px 0;
+    flex-grow: 1; }
+    @media (min-width: 62em) {
+      form .form-group {
+        margin-right: 5px;
+        margin-bottom: 0; } }
+  form input, form .btn, form input:focus, form .btn:focus {
+    height: 50px;
+    /*line-height: 50px;*/
+    padding: 10px;
+    border-radius: 0.75rem;
+    font-size: 20px;
+    outline: none; }
+  form input, form .dropdown-toggle {
+    border: 0;
+    box-shadow: none;
+    border-radius: 0.75rem;
+    width: 100%; }
+  form input[placeholder] {
+    color: #000; }
+  form .btn-group {
+    width: auto; }
+    form .btn-group .dropdown-toggle::after {
+      content: none; }
+    @media (min-width: 72em) {
+      form .btn-group {
+        width: 40px; } }
+    form .btn-group .btn {
+      background-color: #fff;
+      border-radius: 0.75rem;
+      text-align: center; }
+      @media (min-width: 62em) {
+        form .btn-group .btn {
+          text-align: left; } }
+  form .dropdown-toggle, form .btn {
+    line-height: initial; }
+  form .btn-go {
+    padding: 0 30px !important;
+    line-height: 50px; }
+
+/*header inside*/
 .header-inside {
-  background-color: #308DB7; }
+  background-color: #308DB7;
+  border-bottom: 5px solid #fff; }
+  .header-inside .user-login {
+    margin-top: 17px; }
+    .header-inside .user-login a {
+      color: #fff; }
   .header-inside header, .header-inside .container {
     display: block; }
   .header-inside header .brand {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 10px 0;
+    text-align: left;
     color: #fff;
     line-height: 100%; }
+  .header-inside .search-module {
+    background-color: #C4DCE6;
+    padding: 5px;
+    margin-top: 5px; }
+    .header-inside .search-module input, .header-inside .search-module .btn, .header-inside .search-module input:focus, .header-inside .search-module .btn:focus {
+      height: 40px;
+      line-height: 100%;
+      padding: 10px;
+      border-radius: 0.5rem;
+      font-size: 15px;
+      outline: none; }
+    .header-inside .search-module .btn-go, .header-inside .search-module .btn-go:focus {
+      line-height: 40px; }
 
+.inside-content {
+  background-color: #eceeef;
+  border-radius: 10px; }
+  .inside-content .search-filters {
+    background-color: #308DB7;
+    border-radius: 15px;
+    padding: 10px;
+    color: #fff; }
+
+/*footer*/
 footer {
   flex-grow: 1;
   text-align: center; }

@@ -20,11 +20,54 @@
 					<div class="col-xs-3 col-sm-3 col-md-3">
 						<div class="brand">airHR</div>
 					</div>
-						<div class="col-xs-7 col-sm-7 col-md-7">
-							search
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+							<!--search-->
+
+							<div class="row">
+								<!--search module-->
+								<div class="col-xs-12 col-sm-12 col-md-12 search-module">
+									<!--form-->
+									<form>
+										<div class="form-group">
+											<input type="text" class="skills-type" placeholder="Skills, Job title, Company, etc">
+										</div>
+
+										<div class="form-group btn-group">
+											<button type="button" class="btn btn-default dropdown-toggle"
+															aria-haspopup="true" data-toggle="dropdown" aria-expanded="false">Location</button>
+											<div class="dropdown-menu">
+												<a class="dropdown-item"  href="#">Action</a>
+												<a class="dropdown-item"  href="#">Another action</a>
+												<a class="dropdown-item"  href="#">Something else here</a>
+
+												<a class="dropdown-item"  href="#">Separated link</a>
+											</div>
+										</div>
+
+										<div class="form-group btn-group">
+											<button type="button" class="btn btn-default dropdown-toggle"
+															aria-haspopup="true" data-toggle="dropdown" aria-expanded="false">0-1 yrs</button>
+											<div class="dropdown-menu">
+												<a class="dropdown-item"  href="#">Action</a>
+												<a class="dropdown-item"  href="#">Another action</a>
+												<a class="dropdown-item"  href="#">Something else here</a>
+
+												<a class="dropdown-item"  href="#">Separated link</a>
+											</div>
+										</div>
+
+										<a href="search-results.html" class="btn btn-lg btn-warning btn-go">Go</a>
+
+									</form>
+
+
+
+								</div>
+							</div>
+
 						</div>
 
-						<div class="col-xs-2 col-sm-2 col-md-2">
+						<div class="col-xs-2 col-sm-2 col-md-2 user-login">
 							<a href="#">Login</a>
 						</div>
 					</div>
@@ -34,15 +77,45 @@
 			</div>
 		</header>
 
-
 	</div>
 	<div class="inside-content">
-		content
+		<div class="container">
+			<div class="row">
+			<div class="col-content">
+			<div class="col-xs-3 col-sm-3 col-md-3">
+				s<!--earch filters-->
+				<div class="search-filters">
+					<!--filter group-->
+					<div class="filter-group">
+						<strong>skills</strong>
+						<form action="">
+
+						</form>
+					</div>
+				</div>
+
+
+
+			</div>
+
+				<div class="col-xs-9 col-sm-9 col-md-9">
+					<div class="search-results">
+						<div class="search-item">item</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		</div>
 	</div>
 	<footer>
 		footer
 	</footer>
 </section>
+
+<!-- jQuery first, then Bootstrap JS. -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>
