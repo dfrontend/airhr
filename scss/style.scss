@@ -134,6 +134,7 @@ form {
 
   .user-login {
     margin-top: 17px;
+    text-align: right;
     a {
       color: $color-white;
     }
@@ -201,13 +202,56 @@ form {
 
     }
 
-    .filter-group {
-      padding:0 5px;
+
+  }
+}
+.filter-group {
+  padding:0 5px 5px;
+  border-bottom:1px solid $color-white;
+  margin-bottom:10px;
+
+  strong {
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom:10px;
+  }
+
+  span {
+    @include pull-right;
+    font-style: italic;
+  }
+  a {
+    font-size:10px;
+    font-style: italic;
+    color: $color-white;
+  }
+  .radio:last-child {
+      margin-bottom:0;
+    }
+
+}
+.search-results {
+  .result-count {
+    padding:10px 0;
+    font-size:17px;
+    text-align: right;
+  }
+
+  .search-item {
+    background-color: $color-white;
+    @include border-radius(20px);
+
+    .media {
+      padding: 10px 10px 10px 40px;
+    }
+
+
+    .media-object {
+      width:50px;
     }
   }
 }
-
-
 
 
 /*footer*/
