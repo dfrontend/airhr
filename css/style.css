@@ -4772,6 +4772,17 @@ form {
     border-radius: 15px;
     padding: 10px;
     color: #fff; }
+    .inside-content .search-filters form {
+      flex-direction: column; }
+    .inside-content .search-filters label {
+      display: block;
+      font-size: 12px; }
+    .inside-content .search-filters input {
+      width: 20px;
+      height: auto;
+      vertical-align: text-bottom; }
+    .inside-content .search-filters .filter-group {
+      padding: 0 5px; }
 
 /*footer*/
 footer {

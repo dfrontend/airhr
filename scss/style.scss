@@ -184,6 +184,26 @@ form {
     @include border-radius(15px);
     padding:10px;
     color: $color-white;
+
+    form {
+      flex-direction: column;
+
+    }
+    label {
+      display: block;
+      font-size: 12px;
+
+    }
+    input {
+      width: 20px;
+      height:auto;
+      vertical-align: text-bottom;
+
+    }
+
+    .filter-group {
+      padding:0 5px;
+    }
   }
 }
 
