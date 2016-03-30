@@ -13,18 +13,54 @@ $color-white: #fff;
 $color-yellow: #FCC607;
 $base-font-color: #5F5C5C;
 
-//custom mixins 
+//custom mixins
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+@mixin transition-property($property...) {
+  -moz-transition-property:    $property;
+  -o-transition-property:      $property;
+  -webkit-transition-property: $property;
+  transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+  -moz-transition-property:    $duration;
+  -o-transition-property:      $duration;
+  -webkit-transition-property: $duration;
+  transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+  -moz-transition-timing-function:    $timing;
+  -o-transition-timing-function:      $timing;
+  -webkit-transition-timing-function: $timing;
+  transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+  -moz-transition-delay:    $delay;
+  -o-transition-delay:      $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay:         $delay;
+}
+
 @mixin flex {
   display: flex;
+}
+
+
+//custom styles
+body {
+  color: $base-font-color;
 }
 
 .flex {
   @include flex();
 }
 
-//custom styles
-body {
-  color: $base-font-color;
+.btn {
+  @include transition(background-color 0.7s);
 }
 
 .page-wrapper {
@@ -248,6 +284,7 @@ form {
 
   &:first-child {
     border:0;
+    padding-top: 0;
   }
   strong {
     display: block;
@@ -287,7 +324,7 @@ form {
     background-color: $color-white;
     margin-bottom: 3px;
     @include border-radius(20px);
-    @include transition(background-color, 5s);
+    @include transition(background-color 0.6s);
 
     &:hover,&:focus {
       background-color: #EAEEF0;
@@ -349,12 +386,13 @@ form {
   .view-btn {
     @include border-radius(20px);
     padding: 10px;
-    width:80px;
+    width:70px;
     @include flex();
     flex-grow:1;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    @include transition(background-color 0.5s, color 0.7s);
 
     &:hover,&:focus {
       background-color: $airhr-blue;
@@ -375,7 +413,7 @@ form {
   .page-link {
     background-color: transparent;
     border:0;
-    padding: 0.55rem;
+    padding: 0.3rem 0.45rem;
     color: $airhr-blue-drk;
     text-decoration: none;
     font-size: 1.4rem;
@@ -387,7 +425,7 @@ form {
   &.active,&.active:hover,&:active,&:focus {
     .page-link {
       background-color: $airhr-blue;
-      @include border-radius(20px);
+      @include border-radius(12px);
       color: $color-yellow;
 
     }

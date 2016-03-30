@@ -4655,11 +4655,17 @@ a.bg-danger:focus, a.bg-danger:hover {
   .hidden-print {
     display: none !important; } }
 
+body {
+  color: #5F5C5C; }
+
 .flex {
   display: flex; }
 
-body {
-  color: #5F5C5C; }
+.btn {
+  -moz-transition: background-color 0.7s;
+  -o-transition: background-color 0.7s;
+  -webkit-transition: background-color 0.7s;
+  transition: background-color 0.7s; }
 
 .page-wrapper {
   display: flex;
@@ -4805,7 +4811,8 @@ form {
   padding: 10px 5px 5px 5px;
   border-top: 1px solid #fff; }
   .filter-group:first-child {
-    border: 0; }
+    border: 0;
+    padding-top: 0; }
   .filter-group strong {
     display: block;
     text-transform: uppercase;
@@ -4831,7 +4838,11 @@ form {
 .search-results .search-item {
   background-color: #fff;
   margin-bottom: 3px;
-  border-radius: 20px; }
+  border-radius: 20px;
+  -moz-transition: background-color 0.6s;
+  -o-transition: background-color 0.6s;
+  -webkit-transition: background-color 0.6s;
+  transition: background-color 0.6s; }
   .search-results .search-item:hover, .search-results .search-item:focus {
     background-color: #EAEEF0; }
   .search-results .search-item .row {
@@ -4872,12 +4883,16 @@ form {
 .search-results .view-btn {
   border-radius: 20px;
   padding: 10px;
-  width: 80px;
+  width: 70px;
   display: flex;
   flex-grow: 1;
   flex-direction: row;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  -moz-transition: background-color 0.5s, color 0.7s;
+  -o-transition: background-color 0.5s, color 0.7s;
+  -webkit-transition: background-color 0.5s, color 0.7s;
+  transition: background-color 0.5s, color 0.7s; }
   .search-results .view-btn:hover, .search-results .view-btn:focus {
     background-color: #107DA5;
     color: #FCC607;
@@ -4893,7 +4908,7 @@ form {
   .page-item .page-link {
     background-color: transparent;
     border: 0;
-    padding: 0.55rem;
+    padding: 0.3rem 0.45rem;
     color: #152B45;
     text-decoration: none;
     font-size: 1.4rem;
@@ -4902,7 +4917,7 @@ form {
       color: #FCC607; }
   .page-item.active .page-link, .page-item.active:hover .page-link, .page-item:active .page-link, .page-item:focus .page-link {
     background-color: #107DA5;
-    border-radius: 20px;
+    border-radius: 12px;
     color: #FCC607; }
   .page-item.first, .page-item.last, .page-item.next, .page-item.prev {
     margin: 0 0.5rem; }
