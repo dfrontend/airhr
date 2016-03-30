@@ -272,12 +272,41 @@ form {
 
     .media {
       padding: 10px 10px 10px 30px;
+      
+      .source {
+        color: #4F4C4C;
+        font-size:12px;
+        margin-bottom:5px;
+      }
     }
-
-
+    
     .media-object {
-      width:50px;
+      width:70px;
     }
+  }
+  
+  h4 {
+    color: #152B45;
+    margin-bottom:10px;
+    small {
+      color: #231F20;
+      font-size:60%;
+    }
+  }
+  .current-exp {
+    margin-bottom: 5px;
+  }
+  .skill-tags {
+
+    span {
+      display: inline-block;
+      background-color: #7D97A7;
+      font-size: 11px;
+      color: $color-white;
+      padding:3px 10px;
+      text-transform: uppercase;
+    }
+
   }
 }
 

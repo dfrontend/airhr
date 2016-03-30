@@ -4826,8 +4826,27 @@ form {
   border-radius: 20px; }
   .search-results .search-item .media {
     padding: 10px 10px 10px 30px; }
+    .search-results .search-item .media .source {
+      color: #4F4C4C;
+      font-size: 12px;
+      margin-bottom: 5px; }
   .search-results .search-item .media-object {
-    width: 50px; }
+    width: 70px; }
+.search-results h4 {
+  color: #152B45;
+  margin-bottom: 10px; }
+  .search-results h4 small {
+    color: #231F20;
+    font-size: 60%; }
+.search-results .current-exp {
+  margin-bottom: 5px; }
+.search-results .skill-tags span {
+  display: inline-block;
+  background-color: #7D97A7;
+  font-size: 11px;
+  color: #fff;
+  padding: 3px 10px;
+  text-transform: uppercase; }
 
 /*footer*/
 footer {
