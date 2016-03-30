@@ -364,22 +364,54 @@ form {
 
   }
 }
+.result-pagination {
+  @include flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .page-item {
-
+  display: inline-block;
   .page-link {
     background-color: transparent;
     border:0;
     padding: 0.55rem;
     color: $airhr-blue-drk;
     text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    &:hover {
+      color: $color-yellow;
+    }
   }
-  &.active,&:active,&:focus {
+  &.active,&.active:hover,&:active,&:focus {
     .page-link {
       background-color: $airhr-blue;
       @include border-radius(20px);
+      color: $color-yellow;
 
     }
+
+  }
+
+  &.first,&.last,&.next,&.prev {
+    margin:0 0.5rem;
+
+    // Medium devices (tablets, 48em and up)
+    @media (min-width: 48em) {
+      margin:0 .1rem;
+    }
+    // Large devices (desktops, 62em and up)
+    @media (min-width: 62em) {
+      margin:0 1rem;
+    }
+
+    .page-link {
+      font-size: 1.6rem;
+    }
+
+
+
   }
 }
 
