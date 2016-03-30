@@ -16,17 +16,17 @@ $color-white: #fff;
 header {
   display: flex;
   flex-grow: 1;
-  text-align: center;
-
+  
   .container {
-    display: flex;
-    align-items: flex-end;
+    flex-grow: 1;
   }
 
   .brand {
     font-size: 3rem;
     line-height: 100%;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    align-self:flex-end;
 
     // Large devices (desktops, 62em and up)
     @media (min-width: 62em) {
@@ -34,12 +34,22 @@ header {
     }
 
   }
+  .user-login {
+    text-align: right;
+    margin-top: 30px;
+  }
 
 }
 
-.main-content {
+
+.main-content,.add-wrapper {
   flex-grow: 1;
 }
+
+.add-wrapper {
+  background-color: $airhr-blue;
+}
+
 
 .search-module {
   border-radius: $border-radius * 3;
@@ -243,7 +253,7 @@ form {
     @include border-radius(20px);
 
     .media {
-      padding: 10px 10px 10px 40px;
+      padding: 10px 10px 10px 30px;
     }
 
 

@@ -4662,21 +4662,27 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 header {
   display: flex;
-  flex-grow: 1;
-  text-align: center; }
+  flex-grow: 1; }
   header .container {
-    display: flex;
-    align-items: flex-end; }
+    flex-grow: 1; }
   header .brand {
     font-size: 3rem;
     line-height: 100%;
-    margin-bottom: 20px; }
+    margin-top: 20px;
+    text-align: center;
+    align-self: flex-end; }
     @media (min-width: 62em) {
       header .brand {
         font-size: 5rem; } }
+  header .user-login {
+    text-align: right;
+    margin-top: 30px; }
 
-.main-content {
+.main-content, .add-wrapper {
   flex-grow: 1; }
+
+.add-wrapper {
+  background-color: #308DB7; }
 
 .search-module {
   border-radius: 0.75rem;
@@ -4810,7 +4816,7 @@ form {
   background-color: #fff;
   border-radius: 20px; }
   .search-results .search-item .media {
-    padding: 10px 10px 10px 40px; }
+    padding: 10px 10px 10px 30px; }
   .search-results .search-item .media-object {
     width: 50px; }
 
