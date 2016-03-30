@@ -3,7 +3,7 @@
 
 //custom variables
 $airhr-blue:  #107DA5;
-$airhr-lt-blue: #C4DCE6;
+$airhr-lt-blue: #CFE5ED;
 $airhr-blue-drk: #152B45;
 
 
@@ -13,24 +13,33 @@ $color-white: #fff;
 $color-yellow: #FCC607;
 $base-font-color: #5F5C5C;
 
+//custom mixins 
+@mixin flex {
+  display: flex;
+}
+
+.flex {
+  @include flex();
+}
+
 //custom styles
 body {
   color: $base-font-color;
 }
 
 .page-wrapper {
-  display: flex;
+  @include flex();
   flex-direction: column;
   height: 100vh;
 }
 
 header {
-  display: flex;
+  @include flex();
   flex-grow: 1;
   
   .container {
     flex-grow: 1;
-    display: flex;
+    @include flex();
     flex-direction: column;
   }
 
@@ -39,7 +48,7 @@ header {
     line-height: 100%;
     margin-bottom: 20px;
     text-align: center;
-    display: flex;
+    @include flex();
     flex-direction: column;
 
     // Large devices (desktops, 62em and up)
@@ -73,7 +82,7 @@ header {
 }
 
 form {
-  display: flex;
+  @include flex();
   flex-direction:column; /*for mobile and tablet portrait*/
 
   // Large devices (desktops, 62em and up)
@@ -220,7 +229,7 @@ form {
     }
     label {
       display: block;
-      font-size: 12px;
+      font-size: 0.8rem;
 
     }
     input {
@@ -234,14 +243,16 @@ form {
   }
 }
 .filter-group {
-  padding:0 5px 5px;
-  border-bottom:1px solid $color-white;
-  margin-bottom:10px;
+  padding:10px 5px 5px 5px;
+  border-top:1px solid $color-white;
 
+  &:first-child {
+    border:0;
+  }
   strong {
     display: block;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.75rem;
     margin-bottom:10px;
   }
 
@@ -254,34 +265,56 @@ form {
     font-style: italic;
     color: $color-white;
   }
-  .radio:last-child {
-      margin-bottom:0;
+  .radio {
+      &.selected {
+          color: $color-yellow;
+      }
     }
-
+  .radio:last-child {
+    margin-bottom:0;
+  }
 }
+
 .search-results {
   .result-count {
     padding:10px 0;
     font-size:17px;
     text-align: right;
+    color: #152B45;
   }
 
   .search-item {
     background-color: $color-white;
+    margin-bottom: 3px;
     @include border-radius(20px);
+    @include transition(background-color, 5s);
 
+    &:hover,&:focus {
+      background-color: #EAEEF0;
+    }
+
+    .row {
+      @include flex();
+      flex-direction:row;
+      flex-grow:1;
+    }
     .media {
       padding: 10px 10px 10px 30px;
       
       .source {
         color: #4F4C4C;
-        font-size:12px;
+        font-size:0.75rem;
         margin-bottom:5px;
       }
     }
     
     .media-object {
       width:70px;
+    }
+
+    .flex {
+      flex-direction: column;
+      align-items: flex-end;
     }
   }
   
@@ -291,13 +324,17 @@ form {
     small {
       color: #231F20;
       font-size:60%;
+      border-left: 1px solid #231F20;
+      padding-left: 10px;
+      margin-left:5px;
+      line-height: 100%;
     }
   }
   .current-exp {
     margin-bottom: 5px;
+    font-size:0.875rem;
   }
   .skill-tags {
-
     span {
       display: inline-block;
       background-color: #7D97A7;
@@ -308,8 +345,43 @@ form {
     }
 
   }
+
+  .view-btn {
+    @include border-radius(20px);
+    padding: 10px;
+    width:80px;
+    @include flex();
+    flex-grow:1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,&:focus {
+      background-color: $airhr-blue;
+      color: $color-yellow;
+      cursor: pointer;
+    }
+
+  }
 }
 
+.page-item {
+
+  .page-link {
+    background-color: transparent;
+    border:0;
+    padding: 0.55rem;
+    color: $airhr-blue-drk;
+    text-decoration: none;
+  }
+  &.active,&:active,&:focus {
+    .page-link {
+      background-color: $airhr-blue;
+      @include border-radius(20px);
+
+    }
+  }
+}
 
 /*footer*/
 footer {
@@ -322,3 +394,14 @@ footer {
     color: $airhr-blue;
   }
 }
+
+/*
+10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem (base)
+18px = 1.125rem
+20px = 1.25rem
+24px = 1.5rem
+30px = 1.875rem
+32px = 2rem*/
