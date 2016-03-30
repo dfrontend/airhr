@@ -2,11 +2,22 @@
 @import "../bower_components/bootstrap/scss/bootstrap.scss";
 
 //custom variables
-$airhr-blue:  #308DB7;
+$airhr-blue:  #107DA5;
 $airhr-lt-blue: #C4DCE6;
-$color-white: #fff;
+$airhr-blue-drk: #152B45;
 
-//styles
+
+$color-gry-lt: #F6F8F9;
+$color-black: #000;
+$color-white: #fff;
+$color-yellow: #FCC607;
+$base-font-color: #5F5C5C;
+
+//custom styles
+body {
+  color: $base-font-color;
+}
+
 .page-wrapper {
   display: flex;
   flex-direction: column;
@@ -19,14 +30,17 @@ header {
   
   .container {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   .brand {
     font-size: 3rem;
     line-height: 100%;
-    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: center;
-    align-self:flex-end;
+    display: flex;
+    flex-direction: column;
 
     // Large devices (desktops, 62em and up)
     @media (min-width: 62em) {
@@ -35,6 +49,7 @@ header {
 
   }
   .user-login {
+    flex-grow: 1;
     text-align: right;
     margin-top: 30px;
   }
@@ -47,7 +62,7 @@ header {
 }
 
 .add-wrapper {
-  background-color: $airhr-blue;
+  background-color: $airhr-blue-drk;
 }
 
 
@@ -133,6 +148,8 @@ form {
   .btn-go {
     padding: 0 30px !important;
     line-height: 50px;
+    background-color: $color-yellow;
+    color: $color-black;
   }
 
 }
@@ -183,12 +200,13 @@ form {
 
     .btn-go, .btn-go:focus {
       line-height:40px;
+
     }
   }
 }
 
 .inside-content {
-  background-color: $gray-lighter;
+  background-color: $color-gry-lt;
   @include border-radius(10px);
   .search-filters {
     background-color: $airhr-blue;
