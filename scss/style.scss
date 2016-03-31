@@ -81,6 +81,11 @@ body {
   @include flex();
   flex-direction: column;
   height: 100vh;
+
+  // Small devices (landscape phones, 34em and up)
+  @media (min-width: 34em) {
+    height: auto;
+  }
 }
 
 header {
@@ -214,8 +219,7 @@ form {
       }
       // Large devices (desktops, 62em and up)
       @media (min-width: 75em) {
-        width: 10px;
-
+        max-width: 100px;
       }
     }
 
@@ -230,6 +234,7 @@ form {
     line-height: 50px;
     background-color: $color-yellow;
     color: $color-black;
+    font-weight:700;
   }
 
 }
@@ -373,8 +378,11 @@ form {
       flex-grow:1;
     }
     .media {
-      padding: 10px 10px 10px 30px;
-      
+      padding: 10px;
+      // Medium devices (tablets, 48em and up)
+      @media (min-width: 48em) {
+        padding: 10px 10px 10px 30px;
+      }
       .source {
         color: #4F4C4C;
         font-size:0.75rem;
@@ -383,7 +391,11 @@ form {
     }
     
     .media-object {
-      width:70px;
+      width:40px;
+      // Medium devices (tablets, 48em and up)
+      @media (min-width: 48em) {
+        width:70px;
+      }
     }
 
     .flex {
@@ -426,10 +438,12 @@ form {
     width:70px;
     @include flex();
     flex-grow:1;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     @include transition(background-color 0.5s, color 0.7s);
+    font-size:.8rem;
+    text-transform: capitalize;
 
     &:hover,&:focus {
       background-color: $airhr-blue;
@@ -437,6 +451,40 @@ form {
       cursor: pointer;
     }
 
+    i {
+      width:45px;
+      height: 45px;
+    }
+
+      &.view {
+        i {
+          background-color: $airhr-blue;
+          -webkit-mask: url(../img/pin-view.svg) no-repeat center;
+          mask: url(../img/pin-view.svg) no-repeat center;
+
+        }
+        &:hover {
+          i {
+            background-color: $color-yellow;
+          }
+
+        }
+      }
+
+    &.viewed {
+      i {
+        background-color: #7D97A7;
+        -webkit-mask: url(../img/pin-view.svg) no-repeat center;
+        mask: url(../img/pin-view.svg) no-repeat center;
+      }
+    }
+
+    &.paid {
+      color: $color-yellow;
+      i {
+        background: url(../img/pin-paid.svg) no-repeat center;
+      }
+    }
   }
 }
 .result-pagination {
