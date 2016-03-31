@@ -346,10 +346,71 @@ form {
           color: $color-yellow;
       }
     }
-  .radio:last-child {
-    margin-bottom:0;
-  }
 }
+
+.radio {
+  input[type="radio"]:empty {
+    margin-left: -999px;
+  }
+  /* style label */
+  input[type="radio"]:empty ~ label {
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  input[type="radio"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 2px;
+    bottom: 0;
+    left: 2px;
+    content: '';
+    width:13px;
+    height: 13px;
+    background: transparent;
+    @include border-radius(100%);
+    border:1px solid $color-white;
+  }
+
+  /* toggle hover */
+  input[type="radio"]:hover:not(:checked) ~ label:before {
+    content:'';
+    color: $color-yellow;
+    background-color: $color-yellow;
+  }
+
+  input[type="radio"]:hover:not(:checked) ~ label {
+    color: $color-yellow;
+  }
+
+  /* toggle on */
+  input[type="radio"]:checked ~ label:before {
+    content:'';
+    color: $color-yellow;
+    background-color: $color-yellow;
+    border:0;
+  }
+  input[type="radio"]:checked ~ label:after {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width:17px;
+    height: 17px;
+    background: transparent;
+    @include border-radius(100%);
+    border:1px solid $color-yellow;
+  }
+
+}
+
+
+
 
 .search-results {
   .result-count {
@@ -547,13 +608,3 @@ footer {
   }
 }
 
-/*
-10px = 0.625rem
-12px = 0.75rem
-14px = 0.875rem
-16px = 1rem (base)
-18px = 1.125rem
-20px = 1.25rem
-24px = 1.5rem
-30px = 1.875rem
-32px = 2rem*/
