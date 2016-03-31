@@ -6,7 +6,6 @@ $airhr-blue:  #107DA5;
 $airhr-lt-blue: #CFE5ED;
 $airhr-blue-drk: #152B45;
 
-
 $color-gry-lt: #F6F8F9;
 $color-black: #000;
 $color-gry-drk: #4F4C4C;
@@ -45,7 +44,6 @@ $base-font-color: #5F5C5C;
   -webkit-transition-delay: $delay;
   transition-delay:         $delay;
 }
-
 
 @mixin flex {
   display: flex;
@@ -513,7 +511,6 @@ form {
       background-color: $airhr-blue;
       @include border-radius(12px);
       color: $color-yellow;
-
     }
 
   }
